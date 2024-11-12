@@ -10,7 +10,7 @@
 }
 :root{
     --bg-color: #10101a;
-    --main-color: #00ccff; /*#ff0055;*/
+    --main-color: /*#00ccff; /*#ff0055;*/ #00ccff;
     --2nd-main-color: #ffffffcc;
     --text-color: #fff;
     --big-font: 5rem;
@@ -240,7 +240,7 @@ section{
     margin-bottom: 40px;
 }
 
-.resume-content{
+/* .resume-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     grid-gap: 2rem;
@@ -253,7 +253,25 @@ section{
     border-radius: 5px;
     cursor: pointer;
     transition: all .40s;
+} */
+.resume-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Use 1fr to make columns take available space */
+    grid-gap: 2rem;
+    margin-top: 4.4rem;
 }
+
+.box {
+    background: #0b0b13;
+    padding: 40px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .box h6{
     color: #3e4455;
     font-size: 14px;
